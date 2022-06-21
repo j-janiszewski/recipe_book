@@ -9,7 +9,7 @@ repo: j-janiszewski/recipe_book
 link-citations: yes
 ---
 
-# Przepisy
+# O stronie
 
 W dalszej części zawarte są przepisy z których regularnie korzystam i dla ułatwienia chciałem je ustandaryzować i zebrać w jednym miejscu. Pod każdym z nich znajduje się informacja skąd dany przepis pochodzi.
 
