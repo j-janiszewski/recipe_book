@@ -47,8 +47,8 @@ jobs:
       - name: Install npm
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+           node-version: '14.17.3'
+           architecture: 'x64'
 
       - name: Deploy to Netlify
         # NETLIFY_AUTH_TOKEN added in the repo's secrets
