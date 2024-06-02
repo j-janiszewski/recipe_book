@@ -47,7 +47,7 @@ jobs:
       - name: Install npm
         uses: actions/setup-node@v4
         with:
-           node-version: '14.17.3'
+           node-version: '16.18.1'
            architecture: 'x64'
 
       - name: Deploy to Netlify
