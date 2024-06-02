@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-12
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@master
@@ -45,9 +45,10 @@ jobs:
           R -e 'bookdown::render_book("index.Rmd", "bookdown::pdf_book", quiet = TRUE)'
         
       - name: Install npm
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
+          cache: "npm"
 
       - name: Deploy to Netlify
         # NETLIFY_AUTH_TOKEN added in the repo's secrets
