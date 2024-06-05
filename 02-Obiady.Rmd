@@ -250,7 +250,7 @@ Przepis pozwala na zrobienie 6 sztuk.
 
 ### Makro (jednej porcji)
 
-- kalorie: 630 kcal
+- kalorie: 807 kcal
 - węglowodany: 43 g
 - tłuszcz: 16 g
 - białko: 54 g
