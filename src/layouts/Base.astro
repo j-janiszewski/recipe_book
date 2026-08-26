@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Domowa książka kucharska — przepisy zebrane w jednym miejscu.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a href={import.meta.env.BASE_URL} class="brand">
+          <span class="brand__mark" aria-hidden="true">◐</span>
+          <span class="brand__text">
+            <span class="brand__name">Spiżarnia</span>
+            <span class="brand__tag">domowa książka kucharska</span>
+          </span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p>Przepisy trzymane w repozytorium jako pliki Markdown — dopisz nowy plik, wypchnij zmiany, gotowe.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    background: var(--pantry-green);
+    border-bottom: 1px solid var(--line-on-dark);
+  }
+  .site-header__inner {
+    padding-block: 22px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--parchment);
+  }
+  .brand__mark {
+    font-size: 1.4rem;
+    color: var(--turmeric);
+  }
+  .brand__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+  .brand__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: 0.01em;
+  }
+  .brand__tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: rgba(247, 241, 225, 0.6);
+  }
+  main {
+    background: var(--parchment);
+  }
+  .site-footer {
+    background: var(--pantry-green);
+    color: rgba(247, 241, 225, 0.55);
+  }
+  .site-footer__inner {
+    padding-block: 28px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+</style>

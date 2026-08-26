@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Ink / pantry palette — deep pantry green, parchment paper, turmeric + rust accents */
+  --ink: #22231f;
+  --ink-soft: #4a4a3f;
+  --pantry-green: #1c2f24;
+  --pantry-green-dim: #24392c;
+  --parchment: #f7f1e1;
+  --parchment-dim: #efe6d2;
+  --turmeric: #d9a22a;
+  --turmeric-dark: #a97417;
+  --rust: #b7431f;
+  --line: rgba(34, 35, 31, 0.14);
+  --line-on-dark: rgba(247, 241, 225, 0.16);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', ui-serif, serif;
+  --font-body: 'Libre Franklin', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --radius: 3px;
+  --container: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--pantry-green);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--turmeric);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,74 @@
+---
+interface Props {
+  calories: number | null;
+  protein: number | null;
+  carbs: number | null;
+  fat: number | null;
+  servings: number | null;
+}
+
+const { calories, protein, carbs, fat, servings } = Astro.props;
+const hasMacro = calories || protein || carbs || fat;
+if (!hasMacro && !servings) return null;
+---
+
+<div class="macro">
+  {servings && (
+    <div class="macro__item">
+      <span class="macro__value">{servings}</span>
+      <span class="macro__label">porcje</span>
+    </div>
+  )}
+  {calories && (
+    <div class="macro__item">
+      <span class="macro__value">{calories}</span>
+      <span class="macro__label">kcal</span>
+    </div>
+  )}
+  {protein && (
+    <div class="macro__item">
+      <span class="macro__value">{protein} g</span>
+      <span class="macro__label">białko</span>
+    </div>
+  )}
+  {carbs && (
+    <div class="macro__item">
+      <span class="macro__value">{carbs} g</span>
+      <span class="macro__label">węglowodany</span>
+    </div>
+  )}
+  {fat && (
+    <div class="macro__item">
+      <span class="macro__value">{fat} g</span>
+      <span class="macro__label">tłuszcz</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .macro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding-block: 16px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-mono);
+  }
+  .macro__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .macro__value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--rust);
+  }
+  .macro__label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-soft);
+  }
+</style>

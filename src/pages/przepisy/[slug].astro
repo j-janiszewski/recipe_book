@@ -1,0 +1,159 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import MacroRow from '../../components/MacroRow.astro';
+import { categoryFor } from '../../data/categories';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('recipes');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, tags, servings, source, sourceName, calories, protein, carbs, fat } = entry.data;
+const cat = tags[0] ? categoryFor(tags[0]) : null;
+---
+
+<Base title={`${title} — Spiżarnia`}>
+  <article class="recipe wrap">
+    <a class="back" href={import.meta.env.BASE_URL}>← wszystkie przepisy</a>
+
+    {cat && (
+      <span class="recipe__tag" style={`--tag-color:${cat.color}; --tag-bg:${cat.bg}`}>
+        {cat.label}
+      </span>
+    )}
+
+    <h1 class="recipe__title">{title}</h1>
+
+    <MacroRow calories={calories} protein={protein} carbs={carbs} fat={fat} servings={servings} />
+
+    <div class="recipe__body">
+      <Content />
+    </div>
+
+    {source && (
+      <p class="recipe__source">
+        Przepis pochodzi {sourceName ? `z ${sourceName}` : 'z zewnętrznego źródła'} —{' '}
+        <a href={source} target="_blank" rel="noopener noreferrer">otwórz źródło</a>
+      </p>
+    )}
+  </article>
+</Base>
+
+<style>
+  .recipe {
+    max-width: 720px;
+    padding-block: 36px 64px;
+  }
+  .back {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin-bottom: 22px;
+  }
+  .back:hover {
+    color: var(--rust);
+  }
+  .recipe__tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: var(--tag-color);
+    background: var(--tag-bg);
+    margin-bottom: 14px;
+  }
+  .recipe__title {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+  .recipe__body :global(h3) {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--turmeric-dark);
+    margin-top: 34px;
+    margin-bottom: 12px;
+  }
+  .recipe__body :global(ul) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .recipe__body :global(li) {
+    position: relative;
+    padding-left: 26px;
+    line-height: 1.5;
+  }
+  .recipe__body :global(li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid var(--ink-soft);
+    border-radius: 3px;
+  }
+  .recipe__body :global(ol) {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .recipe__body :global(ol li) {
+    counter-increment: step;
+    padding-left: 40px;
+    line-height: 1.6;
+  }
+  .recipe__body :global(ol li::before) {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--pantry-green);
+    color: var(--parchment);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  .recipe__body :global(p) {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .recipe__source {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .recipe__source a {
+    color: var(--rust);
+  }
+</style>

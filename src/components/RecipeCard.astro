@@ -1,0 +1,89 @@
+---
+import { categoryFor } from '../data/categories';
+
+interface Props {
+  slug: string;
+  title: string;
+  tags: string[];
+  servings: number | null;
+  calories: number | null;
+}
+
+const { slug, title, tags, servings, calories } = Astro.props;
+const primaryTag = tags[0];
+const cat = primaryTag ? categoryFor(primaryTag) : null;
+---
+
+<a
+  class="card"
+  href={`${import.meta.env.BASE_URL}przepisy/${slug}/`}
+  data-tags={tags.join(' ')}
+>
+  <div class="card__fold" aria-hidden="true"></div>
+  {cat && (
+    <span class="card__tag" style={`--tag-color:${cat.color}; --tag-bg:${cat.bg}`}>
+      {cat.label}
+    </span>
+  )}
+  <h3 class="card__title">{title}</h3>
+  <div class="card__meta">
+    {servings && <span class="card__meta-item">{servings} porcje</span>}
+    {calories && <span class="card__meta-item">{calories} kcal</span>}
+  </div>
+</a>
+
+<style>
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fffdf7;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 20px 22px;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: 0 1px 0 rgba(34, 35, 31, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover,
+  .card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -14px rgba(28, 47, 36, 0.45);
+  }
+  .card__fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16px 16px 0;
+    border-color: transparent var(--parchment-dim) transparent transparent;
+  }
+  .card__tag {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: var(--tag-color);
+    background: var(--tag-bg);
+  }
+  .card__title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .card__meta {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+  }
+</style>

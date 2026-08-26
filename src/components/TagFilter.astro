@@ -1,0 +1,85 @@
+---
+import { categoryFor } from '../data/categories';
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="filter" id="tag-filter">
+  <button type="button" class="chip chip--all" data-tag="" aria-pressed="true">
+    Wszystkie
+  </button>
+  {tags.map((tag) => {
+    const cat = categoryFor(tag);
+    return (
+      <button
+        type="button"
+        class="chip"
+        data-tag={tag}
+        style={`--chip-color:${cat.color}; --chip-bg:${cat.bg}`}
+        aria-pressed="false"
+      >
+        {cat.label}
+      </button>
+    );
+  })}
+</div>
+
+<script>
+  const filterEl = document.getElementById('tag-filter');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-tags]'));
+  const emptyState = document.getElementById('empty-state');
+
+  filterEl?.addEventListener('click', (event) => {
+    const btn = (event.target as HTMLElement).closest<HTMLButtonElement>('.chip');
+    if (!btn) return;
+
+    filterEl.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', 'false'));
+    btn.setAttribute('aria-pressed', 'true');
+
+    const tag = btn.dataset.tag ?? '';
+    let visible = 0;
+    cards.forEach((card) => {
+      const tags = (card.dataset.tags ?? '').split(' ');
+      const show = tag === '' || tags.includes(tag);
+      card.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+    if (emptyState) emptyState.style.display = visible === 0 ? 'block' : 'none';
+  });
+</script>
+
+<style>
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 7px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fffdf7;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .chip[aria-pressed='true'] {
+    color: var(--chip-color, var(--parchment));
+    background: var(--chip-bg, var(--pantry-green));
+    border-color: transparent;
+  }
+  .chip--all[aria-pressed='true'] {
+    color: var(--parchment);
+    background: var(--pantry-green);
+  }
+  .chip:hover {
+    border-color: var(--ink-soft);
+  }
+</style>

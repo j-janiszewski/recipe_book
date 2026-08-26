@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import TagFilter from '../components/TagFilter.astro';
+import { CATEGORIES } from '../data/categories';
+
+const entries = await getCollection('recipes');
+const recipes = entries
+  .map((e) => ({ slug: e.id, ...e.data }))
+  .sort((a, b) => a.title.localeCompare(b.title, 'pl'));
+
+const usedTags = [...new Set(recipes.flatMap((r) => r.tags))];
+const orderedTags = Object.keys(CATEGORIES).filter((t) => usedTags.includes(t));
+---
+
+<Base title="Spiżarnia — domowa książka kucharska">
+  <section class="intro wrap">
+    <p class="intro__eyebrow">{recipes.length} przepisów w spiżarni</p>
+    <h1 class="intro__title">Co dziś gotujemy?</h1>
+    <p class="intro__desc">
+      Zbiór rodzinnych przepisów trzymanych jako zwykłe pliki tekstowe —
+      bez bazy danych, bez logowania. Wybierz kategorię albo przewiń wszystko.
+    </p>
+    <TagFilter tags={orderedTags} />
+  </section>
+
+  <section class="grid-section wrap">
+    <div class="grid">
+      {recipes.map((r) => (
+        <RecipeCard
+          slug={r.slug}
+          title={r.title}
+          tags={r.tags}
+          servings={r.servings}
+          calories={r.calories}
+        />
+      ))}
+    </div>
+    <p id="empty-state" class="empty" style="display:none">
+      Brak przepisów w tej kategorii — jeszcze.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .intro {
+    padding-block: 44px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 640px;
+  }
+  .intro__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--turmeric-dark);
+    margin: 0;
+  }
+  .intro__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-style: italic;
+  }
+  .intro__desc {
+    margin: 0 0 6px;
+    color: var(--ink-soft);
+  }
+  .grid-section {
+    padding-block: 8px 56px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .empty {
+    font-family: var(--font-mono);
+    color: var(--ink-soft);
+    padding-block: 40px;
+    text-align: center;
+  }
+</style>
