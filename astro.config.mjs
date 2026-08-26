@@ -9,5 +9,5 @@ import { defineConfig } from 'astro/config';
 // deploy workflow in .github/workflows/deploy.yml will pick them up.
 export default defineConfig({
   site: 'https://j-janiszewski.github.io',
-  base: '/recipe_book',
+  base: '/recipe_book/',
 });
