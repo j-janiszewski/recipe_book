@@ -45,6 +45,16 @@ const cat = tags[0] ? categoryFor(tags[0]) : null;
   </article>
 </Base>
 
+<script>
+  // Ingredient lists are the only <ul> in the recipe body (steps use <ol>).
+  // Long lists get a two-column layout so the page doesn't stretch forever;
+  // short lists stay single-column so they don't look sparse.
+  const list = document.querySelector<HTMLUListElement>('.recipe__body ul');
+  if (list && list.children.length > 8) {
+    list.classList.add('ingredients--cols-2');
+  }
+</script>
+
 <style>
   .recipe {
     max-width: 720px;
@@ -109,6 +119,20 @@ const cat = tags[0] ? categoryFor(tags[0]) : null;
     height: 12px;
     border: 1.5px solid var(--ink-soft);
     border-radius: 3px;
+  }
+  /* Long ingredient lists (>8 items) run in two tighter columns so the
+     page doesn't stretch on; short lists stay single-column. */
+  .recipe__body :global(ul.ingredients--cols-2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    column-gap: 20px;
+    row-gap: 6px;
+  }
+  @media (max-width: 560px) {
+    .recipe__body :global(ul.ingredients--cols-2) {
+      grid-template-columns: 1fr;
+    }
   }
   .recipe__body :global(ol) {
     margin: 0;

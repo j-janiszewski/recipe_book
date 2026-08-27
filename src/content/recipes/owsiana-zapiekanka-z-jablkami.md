@@ -2,26 +2,26 @@
 title: "Owsiana zapiekanka z jabłkami"
 tags:
   - sniadanie
-servings: null
+servings: 6
 source: "https://mealprepmanual.com/apple-pie-baked-oatmeal/"
 sourceName: "Meal Prep Manual"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 375
+protein: 13
+carbs: 61
+fat: 10
 ---
 
 ### Lista składników
 
 - 4 średnie jabłka (600g)
 - 240 g płatków owsianych
-- 480 ml mleka
-- 28 g (2 łyżka) masła
-- 40 g mąki 
-- 20 g cukru
-- 48 g brązowego cukru
 - łyżeczka proszku do pieczenia
 - łyżka cynamonu
+- 40 g mąki 
+- 28 g (2 łyżka) masła
+- 480 ml mleka
+- 20 g cukru
+- 48 g brązowego cukru
 
 (mąke i cukier można zastąpić 60 g dowolnego białka w proszku)
 

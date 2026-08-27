@@ -2,13 +2,13 @@
 title: "Spaghetti alla puttanesca"
 tags:
   - obiad
-servings: null
+servings: 2
 source: null
 sourceName: null
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 420
+protein: 14
+carbs: 63
+fat: 12
 ---
 
 ### Lista składników
@@ -18,10 +18,10 @@ fat: null
 - 1/3 szklanki czarnych oliwek
 - 4 anchovies
 - łyżka kaparów
-- 3 ząbki czosnków
 - płatki chili
 - oregano
 - łyżka oliwy
+- 3 ząbki czosnków
 
 ### Przygotowanie
 

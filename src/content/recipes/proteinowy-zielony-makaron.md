@@ -5,7 +5,7 @@ tags:
 servings: 4
 source: null
 sourceName: null
-calories: null
+calories: 560
 protein: 34
 carbs: 75
 fat: 13
@@ -18,12 +18,12 @@ fat: 13
 - 400 gram makaronu 
 - Mrozony szpinak (450 g)
 - 2 opakowania serka wiejskiego
-- 2 ząbki czosnków
 - łyżeczka płatków chili
 - 2 łyżki jasnej pasty miso
 - 2 łyżki sosu sojowego
 - 1 cytryna
 - 4 jajka ugotowane na półtwardo
+- 2 ząbki czosnków
 
 ### Przygotowanie
 

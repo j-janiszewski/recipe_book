@@ -2,26 +2,26 @@
 title: "Cytrynowy kuskus Z cukinią, miętą i fetą"
 tags:
   - obiad
-servings: null
+servings: 2
 source: "https://www.kwestiasmaku.com/dania_dla_dwojga/kuskus/kuskus_z_cukinia_mieta_feta/przepis.html"
 sourceName: "kwestiasmaku"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 550
+protein: 17
+carbs: 61
+fat: 25
 ---
 
 ### Lista składników
 
-- 300 g cukinii
-- 2 łyżki oliwy extra vergine
-- 1 ząbek czosnku
 - 1/2 łyżeczki skórki z cytryny
 - 150 ml bulionu jarzynowego lub drobiowego
 - 1 łyżka soku z cytryny
 - 150 g kuskusu
 - 1/3 szklanki listków mięty
 - 100 g sera feta
+- 2 łyżki oliwy extra vergine
+- 1 ząbek czosnku
+- 300 g cukinii
 
 ### Przygotowanie
 1. Przyciąć końce cukinii, nie obierać, zetrzeć na tarce o większych oczkach. 

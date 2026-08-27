@@ -2,20 +2,19 @@
 title: "Kokosowy Dal"
 tags:
   - obiad
-servings: null
+servings: 6
 source: "https://www.jadlonomia.com/przepisy/kokosowy-dal-z-czerwonej-soczewicy/"
 sourceName: "jadłonomia"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 585
+protein: 27
+carbs: 69
+fat: 22
 ---
 
 ### Lista składników
 
 
 - 3 szklanki czerwonej soczewicy / 600 g
-- 2 cebule
 - 1 puszka pomidorów
 - 1 puszka mleczka kokosowego
 - 3 łyżeczki mielonego kuminu
@@ -23,8 +22,9 @@ fat: null
 - 2 łyżeczki mielonych ziaren kolendry
 - 1 łyżeczka kurkumy
 - ½ łyżeczki chili
-- 5 ½ szklanki wody
 - olej do smażenia
+- 2 cebule
+- 5 ½ szklanki wody
 
 
 

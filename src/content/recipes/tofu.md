@@ -2,13 +2,13 @@
 title: "Tofu"
 tags:
   - ogolne
-servings: null
+servings: 4
 source: null
 sourceName: null
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 70
+protein: 7
+carbs: 2
+fat: 4
 ---
 
 ### Lista składników
@@ -16,8 +16,8 @@ fat: null
 Składniki na około 360 g tofu. Konieczna również będzie chusta serowarska oraz prasa do tofu.
 
 - 500 gm nasion soi
-- dużo wody
 - 2 łyżeczki nigari
+- dużo wody
 
 
 ### Przygotowanie

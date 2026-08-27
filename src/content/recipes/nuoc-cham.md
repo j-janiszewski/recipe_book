@@ -2,25 +2,25 @@
 title: "Nước chấm"
 tags:
   - sos
-servings: null
+servings: 4
 source: null
 sourceName: null
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 30
+protein: 1
+carbs: 7
+fat: 0
 ---
 
 Do czego?
 - Spring rolls
 
 ### Lista składników
-- 6 łyżek wody
-- 2 łyżki cukru
 - 1,5 łyżki cytryny
 - 2 łyżki sosu rybnego
-- 1 ząbek czosnku
 - 1 papryczka chili (opcjonalnie)
+- 1 ząbek czosnku
+- 6 łyżek wody
+- 2 łyżki cukru
 
 
 ### Przygotowanie

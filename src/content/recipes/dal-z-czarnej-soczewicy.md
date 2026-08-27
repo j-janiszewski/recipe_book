@@ -2,33 +2,33 @@
 title: "Dal z czarnej soczewicy"
 tags:
   - obiad
-servings: null
+servings: 4
 source: "https://www.jadlonomia.com/przepisy/dal-z-czarnej-soczewicy/"
 sourceName: "jadłonomia"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 470
+protein: 24
+carbs: 64
+fat: 13
 ---
 
 ### Lista składników
 
 - 350 gram czarnej soczewiczy
-- 1,25 l wody
 - 1 łyżeczka chili
 - 1,5 łyżeczki mielonego kuminu
-- 3 lub 4 ząbki czosnku
 - 3 cm imbiru
-- 1 cebula
 - 1 puszka pomidorów
 - 3 łyżki koncentratu
-- 1/4 łyżki brązowego cukru
-
 - 1/2 puszki mleka kokosowego
 -  1/2 łyżeczki zmielonych ziaren kolendry
-- 1/4 łyżeczki czarnego pieprzu
 - 1/4 łyżeczki cynamonu
 - 1/4 łyżeczki gałki muszkatałowej
+
+- 1 cebula
+- 3 lub 4 ząbki czosnku
+- 1,25 l wody
+- 1/4 łyżeczki czarnego pieprzu
+- 1/4 łyżki brązowego cukru
 
 
 ### Przygotowanie

@@ -2,21 +2,18 @@
 title: "Pomidorowe curry z ciecierzycy"
 tags:
   - obiad
-servings: null
+servings: 4
 source: "https://www.jadlonomia.com/przepisy/pomidorowe-curry-z-ciecierzycy/"
 sourceName: "jadłonomia"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 610
+protein: 18
+carbs: 57
+fat: 36
 ---
 
 ### Lista składników
 
-- 1 cebula
 - 1 łyżeczka gorczycy, można zastąpić musztardą
-- 1/2 łyżeczki soli
-- olej
 - 1 łyżeczka kuminu, zmielonego
 - 1/2 łyżeczki kurkumy
 - szczypta płatków chili
@@ -24,8 +21,11 @@ fat: null
 - 1 puszka mleka kokosowego 
 - 1 puszka pomidorów krojonych
 - 1 łyżka sosu sojowego
-- 1/2 łyżeczki cukru trzcinowego
 - półtorej szklanki suchej ciecierzycy
+- olej
+- 1 cebula
+- 1/2 łyżeczki cukru trzcinowego
+- 1/2 łyżeczki soli
 
 
 ### Przygotowanie

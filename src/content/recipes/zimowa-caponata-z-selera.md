@@ -2,20 +2,18 @@
 title: "Zimowa caponata z selera"
 tags:
   - obiad
-servings: null
+servings: 4
 source: "https://www.jadlonomia.com/przepisy/zimowa-caponata-z-selera/"
 sourceName: "jadłonomia"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 315
+protein: 5
+carbs: 25
+fat: 22
 ---
 
 ### Lista składników
 
 - 500 g selera / 1 duża bulwa
-- 5 łyżek oliwy
-- 3 ząbki czosnku
 - szczypta płatków chili
 - 2 łyżki kaparów
 - 4 łyżki czarnych oliwek
@@ -23,6 +21,8 @@ fat: null
 - 3 łyżki octu balsamicznego
 - 2 łyżki migdałów
 - 1 łyżka rodzynek
+- 5 łyżek oliwy
+- 3 ząbki czosnku
 
 Do podania: naprawdę świetnie smakuje z rukolą
 

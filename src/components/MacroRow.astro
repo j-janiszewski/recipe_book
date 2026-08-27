@@ -45,11 +45,18 @@ if (!hasMacro && !servings) return null;
   )}
 </div>
 
+{hasMacro && (
+  <p class="macro__disclaimer">
+    Wartości odżywcze są szacunkowe i podane <strong>na porcję</strong> — traktuj je jako orientacyjne, nie laboratoryjny pomiar.
+  </p>
+)}
+
 <style>
   .macro {
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
+    align-items: flex-end;
     padding-block: 16px;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
@@ -70,5 +77,12 @@ if (!hasMacro && !servings) return null;
     text-transform: uppercase;
     letter-spacing: 0.07em;
     color: var(--ink-soft);
+  }
+  .macro__disclaimer {
+    margin: 8px 0 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    opacity: 0.85;
   }
 </style>

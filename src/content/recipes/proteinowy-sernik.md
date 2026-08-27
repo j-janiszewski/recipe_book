@@ -5,10 +5,10 @@ tags:
 servings: 6
 source: null
 sourceName: null
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 500
+protein: 32
+carbs: 9
+fat: 38
 ---
 
 ### Lista składników 

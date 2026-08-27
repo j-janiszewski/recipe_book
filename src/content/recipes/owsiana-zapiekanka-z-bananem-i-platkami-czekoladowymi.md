@@ -2,26 +2,26 @@
 title: "Owsiana zapiekanka z bananem i płatkami czekoladowymi"
 tags:
   - sniadanie
-servings: null
+servings: 6
 source: "https://mealprepmanual.com/chocolate-chip-banana-bread-baked-oatmeal/"
 sourceName: "Meal Prep Manual"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 390
+protein: 13
+carbs: 66
+fat: 10
 ---
 
 ### Lista składników
 - 4 banany
 - 240 g płatków owsianych
-- 480 ml mleka
 - 30 g (2 łyżki) milkyway stars 
 - 42 g (2 łyżki) miodu 
 - 2 jajka
-- 14 g (1 łyżka) masła
-- 40 g mąki 
-- 20 g cukru
 - łyżeczka proszku do pieczenia
+- 40 g mąki 
+- 14 g (1 łyżka) masła
+- 480 ml mleka
+- 20 g cukru
 
 (mąke i cukier można zastąpić 60 g dowolnego białka w proszku)
 

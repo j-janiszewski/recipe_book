@@ -2,27 +2,27 @@
 title: "Unohana"
 tags:
   - obiad
-servings: null
+servings: 4
 source: "https://www.chopstickchronicles.com/unohana-sauteed-okara-vegetables/"
 sourceName: "chopstick chronicles"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 140
+protein: 3
+carbs: 21
+fat: 4
 ---
 
 ### Lista składników
 
 - 150 gram Okary
-- pół średniej cebuli
 - 20g suszonych grzybów (najlepiej shiitake)
 - pół małej marchewki
-- 3 łyżki cukru
 - 3 łyżki sosu sojowego
 - 1 łyżka mirin
-- 200 ml wody
 - 1/4 szczypiorku
 - łyżka oleju
+- pół średniej cebuli
+- 200 ml wody
+- 3 łyżki cukru
 
 ### Przygotowanie
 

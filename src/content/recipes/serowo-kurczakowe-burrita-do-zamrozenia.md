@@ -2,7 +2,7 @@
 title: "Serowo-kurczakowe burrita do zamrożenia"
 tags:
   - obiad
-servings: null
+servings: 6
 source: "https://www.youtube.com/watch?v=uJQuJqxenMY&list=LL&index=2"
 sourceName: "Ethan Paff"
 calories: 807

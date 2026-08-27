@@ -2,31 +2,31 @@
 title: "Smalec z białej fasoli z dodatkiem jabłka"
 tags:
   - pasta-kanapkowa
-servings: null
+servings: 8
 source: "https://www.jadlonomia.com/przepisy/wegetarianski-smalec-z-jabkie/"
 sourceName: "jadłonomia"
-calories: null
-protein: null
-carbs: null
-fat: null
+calories: 95
+protein: 3
+carbs: 14
+fat: 4
 ---
 
 ### Lista składników 
 
 Na jeden słoik:
 
-- 2 cebule
 - 1 jabłko
 - 2 liście laurowe
 - 1 ziele angielskie
 - 1 goździk
 - 1 jałowiec
-- olej
-
 - 1 puszka białej fasoli lub 1 ½ szklanki ugotowanej fasoli
 - ½ łyżeczki majeranku
+
 - ¼ łyżeczki lubczyku
 - 1 łyżeczka sosu sojowego
+- olej
+- 2 cebule
 - sól i pieprz
 
 ### Przygotowanie
