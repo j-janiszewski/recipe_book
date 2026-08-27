@@ -2,15 +2,14 @@
 
 title: "Sałatka z białej fasoli i sardynek"
 tags:
-
-* obiad
-  servings: 2
-  source: null
-  sourceName: null
-  calories: 330
-  protein: 34
-  carbs: 24
-  fat: 12
+  - obiad
+servings: 6
+source: null
+sourceName: null
+calories: 330
+protein: 34
+carbs: 24
+fat: 12
 
 ---
 
