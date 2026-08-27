@@ -6,7 +6,7 @@ servings: 6
 source: "https://mealprepmanual.com/chocolate-chip-banana-bread-baked-oatmeal/"
 sourceName: "Meal Prep Manual"
 calories: 390
-protein: 13
+protein: 19
 carbs: 66
 fat: 10
 ---
