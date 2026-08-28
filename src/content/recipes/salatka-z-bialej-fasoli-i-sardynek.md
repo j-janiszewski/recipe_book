@@ -7,7 +7,7 @@ servings: 6
 source: null
 sourceName: null
 calories: 330
-protein: 34
+protein: 42
 carbs: 24
 fat: 12
 
